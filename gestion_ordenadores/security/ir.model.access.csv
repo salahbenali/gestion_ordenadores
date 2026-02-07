@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gestion_component,gestion.componente,model_gestion_componente,base.group_user,1,1,1,1
+access_gestion_computer,gestion.ordenador,model_gestion_ordenador,base.group_user,1,1,1,1
+access_gestion_os,gestion.sistema_operativo,model_gestion_sistema_operativo,base.group_user,1,1,1,1

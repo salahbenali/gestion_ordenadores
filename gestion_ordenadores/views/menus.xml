@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_gestion_root" name="Gestión de Equipos" sequence="10"/>
+
+    <menuitem id="menu_gestion_ordenadores" 
+              name="Ordenadores" 
+              parent="menu_gestion_root" 
+              action="action_gestion_computer"
+              sequence="10"/>
+
+    <menuitem id="menu_gestion_componentes" 
+              name="Componentes" 
+              parent="menu_gestion_root" 
+              action="action_gestion_componentes"
+              sequence="20"/>
+</odoo>

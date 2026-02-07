@@ -1,0 +1,42 @@
+<odoo>
+  <!-- Vista lista -->
+  <record id="view_gestion_computer_list" model="ir.ui.view">
+    <field name="name">gestion.ordenador.list</field>
+    <field name="model">gestion.ordenador</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="name" />
+        <field name="precio" />
+        <field name="ultima_modificacion"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Vista formulario -->
+  <record id="view_gestion_computer_form" model="ir.ui.view">
+    <field name="name">gestion.ordenador.form</field>
+    <field name="model">gestion.ordenador</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name" />
+            <field name="user_id"/>
+            <field name="components_ids" widget="many2many_tags"/>
+            <field name="sistema_operativo_ids" widget="many2many_tags" />
+            <field name="precio" readonly="1" />
+            <field name="ultima_modificacion"/>
+            <field name="currency_id" invisible="1"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- Acción -->
+  <record id="action_gestion_computer" model="ir.actions.act_window">
+    <field name="name">Inventario de Ordenadores</field>
+    <field name="res_model">gestion.ordenador</field>
+    <field name="view_mode">list,form</field>
+  </record>
+</odoo>
